@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Birthday Wishes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <div class="container">
+        <h1>🎉 Happy Birthday, Barry! 🎂</h1>
+      </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1595385157889-ad253a606825?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGJpcnRoZGF5JTIwbWVzc2FnZXxlbnwwfHwwfHx8MA%3D%3D" alt="Birthday cake" class="cake" />
+          <p class="message">Wishing you all the love, laughter, and cake you can handle today and always. 🥳</p>
+          <p class="from">~ with love ~💛</p>
+          <button id="celebrateBtn">🎊 Click me!</button>
+        </div>
+
+      <!-- Audio -->
+  <audio id="birthdayMusic" src="https://www.bensound.com/bensound-music/bensound-birthday.mp3"></audio>
+
+  <!-- Confetti JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Script -->
+  <script>
+    const button = document.getElementById("celebrateBtn");
+    const music = document.getElementById("birthdayMusic");
+
+    button.addEventListener("click", () => {
+      // Launch confetti
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+
+      // Play music
+      music.play();
+    });
+  </script>
+        </div>
+    </body>
+</html>

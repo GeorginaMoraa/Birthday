@@ -1,0 +1,124 @@
+body {
+  /* background:repeating-radial-gradient(circle at 50% 50%, #f0f0f0, #f0f0f0 10px, #e0e0e0 10px, #e0e0e0 20px); */
+  background-image: url('https://github.com/missmbuvi04/Memories/blob/89b3fa30fa6fc244935c3d59f8b6c5eecf1c2c10/public/images/background.jpg?raw=true');
+  background-size: cover;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.h1{
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  font-display: swap;
+  font-weight: 700;
+}
+
+.card {
+  background: rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: popUp 1.5s ease-in-out;
+  opacity: 90%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.cake {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.from {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 20px;
+}
+#celebrateBtn {
+  --glow-color: rgb(255, 100, 149); /* light red glow */
+  --glow-spread-color: rgba(255, 50, 149, 0.7); /* spread red glow */
+  --enhanced-glow-color: rgb(255, 200, 200); /* soft red inner glow */
+  --btn-color: rgb(200, 0, 110); /* deep red background */
+
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 
+    0 0 1em .25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: right;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+ 
+ #celebrateBtn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ #celebrateBtn:hover {
+  background-color: rgb(170, 0, 0);
+  box-shadow: 
+    0 0 1.5em .25em var(--glow-color),
+    0 0 5em 1.5em var(--glow-spread-color),
+    inset 0 0 1em .3em var(--enhanced-glow-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
